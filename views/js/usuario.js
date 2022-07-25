@@ -39,3 +39,13 @@ $(".btnEliminarUsuario").click(function(){
   
   
   });
+/*
+  $(document).ready(function () {
+    $('#example').DataTable();
+});
+*/
+$(document).ready(function () {
+  $('#example').DataTable({
+      ajax: 'ajax/tablaUsuario.ajax.php',
+  });
+});

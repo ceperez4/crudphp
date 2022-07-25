@@ -143,8 +143,8 @@ class ControllerUsuario
         $valor = $_POST["ingUsuario"];
 
         $respuesta = ModelUsuario::mdlMostrarUsuarioByUsername($tabla, $item, $valor);
-
-        if ($respuesta["usuario"] == $_POST["ingUsuario"] && $respuesta["password"] ==  $encriptar) {
+        
+        if (isset($respuesta["usuario"]) == $_POST["ingUsuario"] && isset($respuesta["password"]) ==  $encriptar) {
 
           $_SESSION["iniciarSesion"]="ok";
           echo'
